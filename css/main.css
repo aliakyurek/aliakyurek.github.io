@@ -144,6 +144,41 @@ section {
 
 .page-header {
   border-bottom: 1px solid #ccc;
+  color: white; /* Default text color for header */
+  position: relative;
+}
+
+.page-header h1,
+.page-header h2,
+.page-header address,
+.page-header .header-label,
+.page-header .inline-list li,
+.page-header .unstyled-list li {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.page-header a {
+  color: #bbf98e !important; /* Light cyan for links in header */
+}
+
+.page-header a:hover {
+  color: #ffffff !important;
+}
+
+.page-header .inline-list li::after {
+  color: #88ffff; /* Match the link color for separators */
+}
+
+/* Hide header content initially */
+.header-content-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.header-content-visible {
+  opacity: 1;
 }
 
 .page-header .container {
